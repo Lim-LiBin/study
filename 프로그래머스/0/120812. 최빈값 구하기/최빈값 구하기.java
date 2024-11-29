@@ -23,10 +23,9 @@ class Solution {
                 isDuplicate = false;
             } else if (value == maxFrequency) {
                 isDuplicate = true;
+                answer = -1;
             }
         }
-        
-        if (isDuplicate) return -1;
         
         return answer;
     }
