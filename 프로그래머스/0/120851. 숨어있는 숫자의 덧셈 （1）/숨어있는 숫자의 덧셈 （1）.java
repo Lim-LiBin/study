@@ -4,7 +4,7 @@ class Solution {
         
         for (char n : my_string.toCharArray()) {
             if(Character.isDigit(n))
-                answer += (int)n - '0';
+                answer += n - '0';
             else continue;
         }
         
