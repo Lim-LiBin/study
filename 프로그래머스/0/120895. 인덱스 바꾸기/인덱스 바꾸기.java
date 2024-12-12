@@ -2,24 +2,12 @@ class Solution {
     public String solution(String my_string, int num1, int num2) {
         String answer = "";
         
-        char ch1 = my_string.charAt(num1);
-        char ch2 = my_string.charAt(num2);
+        char[] array = my_string.toCharArray();
         
-        for(int i = 0; i < num1; i++) {
-            answer += my_string.charAt(i);
-        }
+        array[num1] = my_string.charAt(num2);
+        array[num2] = my_string.charAt(num1);
         
-        answer += ch2;
-        
-        for(int i = num1 + 1; i < num2; i++) {
-            answer += my_string.charAt(i);
-        }
-        
-        answer += ch1;
-        
-        for(int i = num2 + 1; i < my_string.length(); i++) {
-            answer += my_string.charAt(i);
-        }
+        answer = String.valueOf(array);
         
         return answer;
     }
