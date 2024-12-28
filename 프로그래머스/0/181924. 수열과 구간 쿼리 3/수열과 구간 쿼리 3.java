@@ -1,12 +1,14 @@
 class Solution {
     public int[] solution(int[] arr, int[][] queries) {
         int[] answer = arr.clone();
-        int temp = 0;
         
-        for(int i = 0; i <queries.length; i++) {
-            temp = answer[queries[i][0]];
-            answer[queries[i][0]] = answer[queries[i][1]];
-            answer[queries[i][1]] = temp;
+        for (int[] query : queries) {
+            int i = query[0];
+            int j = query[1];
+
+            int temp = answer[i];
+            answer[i] = answer[j];
+            answer[j] = temp;
         }
         
         return answer;
