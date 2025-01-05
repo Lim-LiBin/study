@@ -1,12 +1,8 @@
 class Solution {
     public String solution(String myString) {
-        String answer = "";
+        myString = myString.toLowerCase();
+        myString = myString.replaceAll("a", "A");
         
-        for(char ch : myString.toCharArray()) {
-            if(ch == 'a' || ch == 'A') answer += 'A';
-            else answer += Character.toLowerCase(ch);
-        }
-        
-        return answer;
+        return myString;
     }
 }
