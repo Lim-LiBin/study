@@ -8,12 +8,12 @@ class Solution {
         int b = Integer.parseInt(arr[2]);
         
         switch(arr[1]) {
-            case "+": {answer = a + b;
-                      break;}
-            case "-": {answer = a - b;
-                      break;}
-            case "*": {answer = a * b;
-                      break;}
+            case "+": answer = a + b;
+                      break;
+            case "-": answer = a - b;
+                      break;
+            case "*": answer = a * b;
+                      break;
         }
         
         return answer;
