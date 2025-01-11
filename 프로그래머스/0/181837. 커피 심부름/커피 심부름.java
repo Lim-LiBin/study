@@ -3,8 +3,8 @@ class Solution {
         int answer = 0;
         
         for (String str : order) {
-            if (str.contains("americano") || str.contains("anything")) answer += 4500;
-            else if (str.contains("latte")) answer += 5000;
+            if (str.contains("latte")) answer += 5000;
+            else answer += 4500;
         }
         
         return answer;
