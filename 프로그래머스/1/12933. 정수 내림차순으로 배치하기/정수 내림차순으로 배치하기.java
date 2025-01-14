@@ -2,29 +2,16 @@ import java.util.Arrays;
 
 class Solution {
     public long solution(long n) {
-        long answer = 0;
         String s = String.valueOf(n);
-        String str = "";
-        int[] array = new int[s.length()];
-        int[] list = new int[s.length()];
-        
-        int i = 0;
-        for (char ch : s.toCharArray()) {
-            array[i++] = Integer.parseInt(String.valueOf(ch));
-        }
+        char[] array = s.toCharArray();
         
         Arrays.sort(array);
         
-        for (int l = 0; l < array.length; l++) {
-            list[l] = array[array.length - 1 - l];
+        StringBuilder sb = new StringBuilder();
+        for (char ch : array) {
+            sb.append(ch);
         }
         
-        for (int num : list) {
-            str += String.valueOf(num);
-        }
-        
-        answer = Long.parseLong(str);
-        
-        return answer;
+        return Long.parseLong(sb.reverse().toString());
     }
 }
