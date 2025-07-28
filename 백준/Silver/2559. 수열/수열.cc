@@ -6,7 +6,7 @@ int arr[100001];
 int sum[100001];
 
 int main() {
-    int n, k, ans = -10000000;
+    int n, k, ans = -9999999;
     
     cin >> n >> k;
     
