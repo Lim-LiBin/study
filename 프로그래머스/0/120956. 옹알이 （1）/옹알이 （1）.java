@@ -1,18 +1,19 @@
 class Solution {
     public int solution(String[] babbling) {
-        int answer = 0;
+        int result = 0;
         
-        for(int i = 0; i < babbling.length; i++) {
+        for(int i = 0;i < babbling.length; i++) {
             String word = babbling[i];
             
             word = word.replaceAll("aya", " ")
-                       .replaceAll("ye", " ")
-                       .replaceAll("woo", " ")
-                       .replaceAll("ma", " ")
-                       .replaceAll(" ", "");
+                .replaceAll("ye", " ")
+                .replaceAll("woo", " ")
+                .replaceAll("ma", " ")
+                .replaceAll(" ", "");
             
-            if(word.equals("")) answer++;
+            if(word.equals("")) result++;
         }
-        return answer;
+        
+        return result;
     }
 }
